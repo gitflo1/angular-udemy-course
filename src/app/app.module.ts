@@ -1,18 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorsService } from './authors/authors.service';
+import { CoursesComponent } from './courses/courses.component';
+import { SummaryPipe } from './summary.pipe';
+import { TitleCasePipe } from './title-case.pipe';
+import { StarIconComponent } from './star-icon/star-icon.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCaseComponent } from './title-case/title-case.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorsComponent,
+    CoursesComponent,
+    SummaryPipe,
+    StarIconComponent,
+    TitleCasePipe,
+    FavoriteComponent,
+    TitleCaseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthorsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
