@@ -9,6 +9,3 @@
 <div (click)="onDivClicked()">
   <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'" (click)="onSave($event)" >Save</button>
 </div>
-<div>
-  <textarea>{{ text | summary:90 }}</textarea>
-</div>

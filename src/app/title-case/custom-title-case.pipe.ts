@@ -1,10 +1,11 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import { format } from 'path';
 
 @Pipe({name: 'customTitleCase'})
 export class CustomTitleCasePipe implements PipeTransform {
     transform(value: string): string {
-
+        if (!value) {
+            return null;
+        }
         const words = value.split(' ');
         words.forEach(function(word) {
             word = this.formatWord(word);
