@@ -5,17 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from './authors/authors.service';
+import { CoursesComponent } from './courses/courses.component';
 import { CustomTitleCasePipe } from './title-case/custom-title-case.pipe';
 import { StarIconComponent } from './star-icon/star-icon.component';
 import { FavoriteComponent } from './favorite/favorite.component';
-
+import { TitleCaseComponent } from './title-case/title-case.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CoursesComponent,
     AuthorsComponent,
     StarIconComponent,
     FavoriteComponent,
+    TitleCaseComponent,
     CustomTitleCasePipe
   ],
   imports: [

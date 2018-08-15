@@ -6,18 +6,19 @@ export class CustomTitleCasePipe implements PipeTransform {
         if (!value) {
             return null;
         }
-        const words = value.split(' ');
-        words.forEach(function(word) {
-            word = this.formatWord(word);
-        });
+        const words: string[] = value.split(' ');
 
+        for (let i = 0; i < words.length; i++) {
+            words[i] = this.formatWord(words[i], i);
+        }
         return words.join(' ');
     }
 
-    formatWord(word: string): string {
+    formatWord(word: string, index: number): string {
+        const wordPassed: string = word.toString();
         const wordInLowerCase = word.toLowerCase();
 
-        if (wordInLowerCase === 'of' || wordInLowerCase === 'the') {
+        if (index !== 0 && wordInLowerCase === 'of' || wordInLowerCase === 'the') {
             return wordInLowerCase;
         } else {
             return wordInLowerCase.charAt(0).toUpperCase() + wordInLowerCase.slice(1);
