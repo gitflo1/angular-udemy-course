@@ -10,6 +10,7 @@ import { CustomTitleCasePipe } from './title-case/custom-title-case.pipe';
 import { StarIconComponent } from './star-icon/star-icon.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TitleCaseComponent } from './title-case/title-case.component';
     StarIconComponent,
     FavoriteComponent,
     TitleCaseComponent,
-    CustomTitleCasePipe
+    CustomTitleCasePipe,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
